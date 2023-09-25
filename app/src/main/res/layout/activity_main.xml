@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/num1EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Number 1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/num2EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Number 2"
+        android:layout_below="@id/num1EditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:inputType="numberDecimal"/>
+
+
+    <RadioGroup
+        android:id="@+id/operationRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/num2EditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+    <RadioButton
+        android:id="@+id/addRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"/>
+
+    <RadioButton
+        android:id="@+id/subtractRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtract"/>
+
+    <RadioButton
+        android:id="@+id/multiplyRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiply"/>
+
+    <RadioButton
+        android:id="@+id/divideRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divide"/>
+
+    <RadioButton
+        android:id="@+id/radioModulus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modulus" />
+</RadioGroup>
+
+<Button
+    android:id="@+id/calculateButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Calculate"
+    android:layout_below="@id/operationRadioGroup"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="24dp"/>
+<TextView
+    android:id="@+id/resultTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/calculateButton"
+    android:layout_marginTop="16dp"
+    android:textSize="24sp"
+    android:background="@color/back"
+    android:text=""
+    android:padding="8dp"
+    android:textColor="#FFFFFF"
+    android:visibility="gone" />
+</RelativeLayout>
